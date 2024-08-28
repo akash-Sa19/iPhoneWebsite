@@ -51,7 +51,7 @@ const VideoCarousel = () => {
   useEffect(() => {
     let currentProgress = 0;
     let span = videoSpanRef.current;
-    console.log("videoRef :", videoRef);
+    // console.log("videoRef :", videoRef);
 
     if (span[videoId]) {
       // animation to move the indicator

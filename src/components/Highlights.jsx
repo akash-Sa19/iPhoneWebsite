@@ -36,7 +36,7 @@ const Highlights = () => {
               <img
                 src={watchImg}
                 alt="watch"
-                className="ml-2"
+                className="mt-1 ml-2"
               />
             </p>
             <p className="link">
@@ -44,7 +44,7 @@ const Highlights = () => {
               <img
                 src={rightImg}
                 alt="right"
-                className="ml-2"
+                className="mt-1.5 ml-2"
               />
             </p>
           </div>

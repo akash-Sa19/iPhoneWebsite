@@ -1,5 +1,5 @@
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils";
 import { useEffect, useState } from "react";
 
@@ -7,6 +7,7 @@ const Hero = () => {
   const [videoSrc, setVideoSrc] = useState(
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
+
   const handleVideoSrcSet = () => {
     if (window.innerWidth < 760) {
       setVideoSrc(smallHeroVideo);
@@ -14,44 +15,36 @@ const Hero = () => {
       setVideoSrc(heroVideo);
     }
   };
+
   useEffect(() => {
     window.addEventListener("resize", handleVideoSrcSet);
 
-    // in react it is imp to clear our event listner
     return () => {
-      window.removeEventListener("resize", handleVideoSrcSet);
+      window.removeEventListener("reisze", handleVideoSrcSet);
     };
   }, []);
 
-  // animation
   useGSAP(() => {
-    gsap.to("#hero", {
-      opacity: 1,
-      delay: 2,
-    });
-    gsap.to("#cta", {
-      opacity: 1,
-      delay: 2.5,
-      y: -50,
-    });
+    gsap.to("#hero", { opacity: 1, delay: 2 });
+    gsap.to("#cta", { opacity: 1, y: -50, delay: 2 });
   }, []);
 
   return (
-    <section className="relative w-full bg-black nav-heigth">
+    <section className="relative w-full bg-black nav-height">
       <div className="flex-col w-full h-5/6 flex-center">
         <p
-          className="hero-title"
           id="hero"
+          className="hero-title"
         >
           iPhone 15 Pro
         </p>
-        <div className="md:w-10/12 w-9/10">
+        <div className="w-9/12 md:w-10/12">
           <video
+            className="pointer-events-none"
             autoPlay
             muted
             playsInline={true}
             key={videoSrc}
-            className="pointer-events-none"
           >
             <source
               src={videoSrc}
@@ -59,19 +52,19 @@ const Hero = () => {
             />
           </video>
         </div>
+      </div>
 
-        <div
-          className="flex flex-col items-center translate-y-20 opacity-0"
-          id="cta"
+      <div
+        id="cta"
+        className="flex flex-col items-center translate-y-20 opacity-0"
+      >
+        <a
+          href="#highlights"
+          className="px-5 py-2 my-5 bg-blue hover:bg-[#108bff] rounded-3xl"
         >
-          <a
-            href="#highlights"
-            className="btn"
-          >
-            Buy
-          </a>
-          <p className="text-xl font-normal">From $199/month or $999</p>
-        </div>
+          Buy
+        </a>
+        <p className="text-xl font-normal">From $199/month or $999</p>
       </div>
     </section>
   );
