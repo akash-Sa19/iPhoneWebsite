@@ -171,14 +171,14 @@ const VideoCarousel = () => {
             className="pr-10 sm:pr-20"
           >
             <div className="video-carousel_container">
-              <div className="object-cover w-full h-full overflow-hidden bg-black flex-center rounded-3xl">
+              <div className="w-full h-full overflow-hidden bg-black flex-center rounded-3xl">
                 <video
                   id="video"
                   // When you add playsinline to the <video> tag, mobile browsers will play the video right where it is (inline), rather than opening it up in fullscreen mode.
                   playsInline={true}
                   className={`${
                     list.id === 2 && "translate-x-44"
-                  } pointer-events-none`}
+                  } pointer-events-none w-full h-full`}
                   // This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
                   // none: Indicates that the video should not be preloaded.
                   // metadata: Indicates that only video metadata (e.g. length) is fetched.
