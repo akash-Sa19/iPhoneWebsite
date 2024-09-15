@@ -261,5 +261,5 @@ function Model(props) {
     </group>
   );
 }
-export default Model;
 useGLTF.preload("/models/scene.glb");
+export default Model;

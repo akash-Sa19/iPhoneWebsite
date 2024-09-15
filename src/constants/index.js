@@ -5,6 +5,13 @@ import {
   highlightFourthVideo,
   highlightSecondVideo,
   highlightThirdVideo,
+  main24mmImg,
+  main28mmImg,
+  main35mmImg,
+  telephoto120mmImg,
+  telephoto48mmImg,
+  ultraWide13mmImg,
+  ultraWideMacroImg,
   whiteImg,
   yellowImg,
 } from "../utils";
@@ -84,4 +91,49 @@ export const footerLinks = [
   "Sales Policy",
   "Legal",
   "Site Map",
+];
+
+export const cameraPhotoSlides = [
+  {
+    id: 1,
+    zoom: "0.5x",
+    text: "Ultra Wide | Macro",
+    img: window.innerWidth < 768 ? ultraWideMacroImg : ultraWideMacroImg,
+  },
+  {
+    id: 2,
+    zoom: "0.5x",
+    text: "Ultra Wide | 13mm",
+    img: ultraWide13mmImg,
+  },
+  {
+    id: 3,
+    zoom: "1x",
+    text: "Main | 24mm",
+    img: main24mmImg,
+  },
+  {
+    id: 4,
+    zoom: "1x",
+    text: "Main | 28 mm",
+    img: main28mmImg,
+  },
+  {
+    id: 5,
+    zoom: "1x",
+    text: "Main | 35mm",
+    img: main35mmImg,
+  },
+  {
+    id: 6,
+    zoom: "2x",
+    text: "Telephoto | 48mm",
+    img: telephoto48mmImg,
+  },
+  {
+    id: 7,
+    zoom: "New 5x",
+    text: "Telephoto | 120mm",
+    img: telephoto120mmImg,
+  },
 ];

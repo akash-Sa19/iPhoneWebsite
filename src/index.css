@@ -82,7 +82,7 @@ canvas {
   }
 
   .link {
-    @apply flex items-center text-xl translate-y-20 opacity-0 cursor-pointer text-blue hover:underline;
+    @apply flex items-center text-base translate-y-20 opacity-0 cursor-pointer lg:text-xl text-blue hover:underline;
   }
 
   .control-btn {

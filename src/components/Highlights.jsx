@@ -22,7 +22,7 @@ const Highlights = () => {
       id="highlights"
       className="w-screen overflow-hidden common-padding bg-zinc"
     >
-      <div className="sreen-max-width">
+      <div className="screen-max-width">
         <div className="items-end justify-between w-full mb-12 md:flex">
           <h1
             id="title"
